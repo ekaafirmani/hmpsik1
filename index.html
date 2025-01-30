@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/logohmps.png" />
+  <title>HMPS Ilmu Keperawatan S1</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+            primary: "#D2B48C",
+            secondary: "#F0F0F0",
+            colorText: "#475569",
+            button: "#FBAB2F",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2CWZ0VDVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-Y2CWZ0VDVY");
+  </script>
+</head>
+
+<body class="font-poppins">
+  <!-- background -->
+  <div class="fixed -z-10 background left-0 top-0 right-0 bottom-0">
+    <img src="assets/pattern.png" class="w-full h-full object-cover" />
+  </div>
+
+  <!-- navbar -->
+  <div class="glass-effect bg-white/30 border-white/40 fixed left-10 top-2 right-10 z-10 rounded-full">
+    <div class="relative container mx-auto flex items-center justify-between py-[11px] px-5">
+      <div class="logo text-[30px] text-[#1d68e0] font-bold flex items-center gap-x-2">
+        <img src="assets/logohmps.png" alt="Logo" class="w-[60px] hidden md:block" style="
+              width: 55px;
+              height: 55px;
+              border-radius: 50%;
+              border: 2px;
+              display: block;
+              margin: 0 auto;
+            " />
+        KABINET SANKALPA BYAKTA
+      </div>
+      <nav class="hidden lg:flex font-medium items-center md:gap-x-5 lg:gap-x-9 text-slate-600">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#departement">Kepengurusan</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="px-5 py-1 rounded-full text-slate-600">Contact</a>
+      </nav>
+      <div class="menu cursor-pointer w-[40px] h-[40px] bg-white flex lg:hidden items-center justify-center rounded-md">
+        <img src="assets/menu.svg" class="w-[30px]" />
+      </div>
+      <div id="toggle-content" class="absolute right-5 top-16 w-[200px] rounded-lg bg-white py-3">
+        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#home">Home</a>
+        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#about">About</a>
+        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200"
+          href="#departement">Kepengurusan</a>
+        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#gallery">Gallery</a>
+        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <!-- navbar end -->
+
+  <!-- hero section -->
+  <div id="home" class="hero py-9 pt-[75px] bg-transparent text-slate-900">
+    <div class="container p-5 mx-auto grid grid-cols-1 lg:grid-cols-2 lg:h-[90vh] py-[200px] lg:py-0">
+      <div class="flex items-center justify-center lg:justify-start text-center lg:text-start">
+        <div class="title mb-9 lg:mb-0">
+          <h2 data-aos="fade-up" class="font-bold text-[50px] text-left">
+            Himpunan Mahasiswa Program Studi
+            Ilmu Kepewaratan S1
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="50" class="text-[18px] my-5 font-medium text-left">
+            Universitas Muhammadiyah Purwokerto
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="box-image flex gap-2">
+          <div class="img-left mt-3">
+            <div data-aos="fade-up"
+              class="border-[3px] img w-[150px] h-[84px] sm:w-[200px] sm:h-[210px] lg:w-[230px] lg:h-[240px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg mt-8">
+              <img src="assets/foto2.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="50"
+              class="border-[3px] img w-[150px] h-[160px] sm:w-[200px] sm:h-[210px] lg:w-[230px] lg:h-[240px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg">
+              <img src="assets/foto3.jpg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="img-right mt-[70px]">
+            <div data-aos="fade-up" data-aos-delay="100"
+              class="border-[3px] img w-[150px] h-[160px] sm:w-[200px] sm:h-[210px] lg:w-[230px] lg:h-[240px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg">
+              <img src="assets/foto4.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="150"
+              class="border-[3px] img w-[150px] h-[160px] sm:w-[200px] sm:h-[210px] lg:w-[230px] lg:h-[240px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg">
+              <img src="assets/foto5.jpg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- hero section end -->
+
+  <!-- about section -->
+  <div id="about" class="about bg-white">
+    <div
+      class="container max-w-screen-xl p-5 px-10 lg:px-20 mx-auto grid grid-cols-1 lg:grid-cols-[2fr,3fr] lg:h-auto gap-10">
+      <!-- Bagian Gambar -->
+      <div class="flex flex-col items-center lg:items-start gap-5">
+        <!-- Gambar 1 -->
+        <div
+          class="img w-[150px] h-[160px] sm:w-[200px] sm:h-[210px] lg:w-[240px] lg:h-[250px] rounded-lg bg-blue-600 overflow-hidden shadow-lg">
+          <img src="assets/logohmps.png" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Gambar 2 -->
+        <div
+          class="img w-[150px] h-[160px] sm:w-[200px] sm:h-[210px] lg:w-[240px] lg:h-[250px] rounded-lg bg-blue-600 overflow-hidden shadow-lg self-end">
+          <img src="assets/logokabinet.jpg" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Gambar 3 -->
+        <div
+          class="img w-[150px] h-[160px] sm:w-[200px] sm:h-[210px] lg:w-[240px] lg:h-[250px] rounded-lg bg-gray-300 overflow-hidden shadow-lg">
+          <img src="assets/ump.png" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Bagian Teks -->
+      <div class="flex items-center">
+        <div class="title px-5">
+          <h2 data-aos="fade-up" class="font-bold text-[20px] sm:text-[30px] lg:text-[40px] mb-5">
+            VISI MISI <br>
+            <span class="text-[#1d68e0]">HMPS ILMU KEPERAWATAN S1</span>
+          </h2>
+          <p data-aos="fade-up" class="text-[15px] sm:text-normal lg:text-[18px] leading-relaxed lg:leading-loose">
+            <strong>Visi:</strong><br>
+            Menjadikan HMPSIK FIKES UMP sebagai suatu wadah aspirasi mahasiswa Ilmu Keperawatan S1 yang aktif, inovatif,
+            kreatif, dan solidaritas tinggi dalam upaya meningkatkan mahasiswa Ilmu Keperawatan S1 yang kritis,
+            kompeten,
+            integritas tinggi, dan profesional.
+            <br><br>
+            <strong>Misi:</strong><br>
+            1. Membangun kepedulian sosial antar pengurus, anggota, dan lembaga Keluarga Mahasiswa Fakultas Ilmu
+            Kesehatan (KM FIKES) sesuai dengan catur dharma perguruan tinggi.<br>
+            2. Meningkatkan kepeduliaan dan kepekaan mahasiswa terhadap tantangan dimasa depan khususnya dalam bidang
+            keperawatan.<br>
+            3. Menyelenggarakan kegiatan yang dapat meningkatkan kreativitas dan inovatif.<br>
+            4. Menumbuhkan rasa saling menghargai, menghormati, dan menjalin hubungan baik dengan sesama pengurus
+            HMPSIK, UKM, dosen, dan para alumni.<br>
+            5. Mendorong mahasiswa berperan aktif dan dinamis dalam semua kegiatan yang berada di dalam maupun di luar
+            kampus.<br>
+            6. Mendorong peningkatan mutu dan kualitas melalui integritas dan sinergitas mahasiswa Ilmu Keperawatan S1.
+          </p>
+          <button id="whatsappButton" data-aos="fade-up"
+            class="whatsappButton px-7 py-2 font-medium bg-button text-white text-xl rounded-full mt-5">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about section end -->
+
+  <!-- kepengurusan section -->
+  <div id="departement" class="Departement bg-secondary">
+    <div class="container p-5 mx-auto py-[100px]">
+      <h2 class="font-medium text-[30px] text-center mb-9">KEPENGURUSAN HMPSIK 2024/2025</h2>
+      <div class="list-product flex items-center flex-wrap justify-center gap-5">
+
+        <!-- BPH -->
+        <div data-aos="fade-up" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/BPH.jpg" class="w-full h-full object-cover" />
+          </div><br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Badan Pengurus Harian</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-ph">
+                Lihat Detail
+              </a>
+            </button>
+          </div>
+
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/kader.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Pengkaderan</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-pengkaderan">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/kastrad.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kajian Strategis dan Advokasi</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-kastrad">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+      
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/PK.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Pendidikan dan Keilmuan</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-pk">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/kerohanian.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kerohanian</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-kerohanian">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/olahraga.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Seni Budaya dan Olahraga</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-sbo">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/medikom.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Media Komunikasi dan Informasi</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-medkom">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/usaha.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kewirausahaan</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-kwu">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/huplu.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Hubungan Luar</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-hublu">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
+          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+            <img src="assets/kesehatan.jpg" class="w-full h-full object-cover" />
+          </div> <br>
+          <div class="product-desc">
+            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kesehatan</h4>
+          </div>
+          <div class="flex items-center justify-center mt-3">
+            <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
+              <a href="#detail-kesehatan">
+                Lihat Detail
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- kepengurusan section end -->
+
+  <div class="py-16 bg-gray-100">
+    <div class="container mx-auto px-5">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Detail Kepengurusan HMPSIK 2024/2025</h2>
+
+      <!-- Departemen 1: BPH -->
+      <div id="detail-ph" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Badan Pengurus Harian</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/BPH.jpg" alt="Gambar Utama">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/PH/ketua.jpg" alt="Pengurus 1">
+              <p>Ketua</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/PH/wakil.jpg" alt="Pengurus 2">
+              <p>Wakil ketua</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/PH/sekre1.jpg" alt="Pengurus 3">
+              <p>sekretaris 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/PH/sekre2.jpg" alt="Pengurus 4">
+              <p>sekretaris 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/PH/sekre3.jpg" alt="Pengurus 4">
+              <p>sekretaris 3</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/PH/bendahara1.jpg" alt="Pengurus 4">
+              <p>Bendahara 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/PH/bendahara2.jpg" alt="Pengurus 4">
+              <p>Bendahara 2</p>
+            </div>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Badan Pengurus Harian</h3>
+              <p class="text-lg text-gray-600">
+                Badan Pengurus Harian (BPH) adalah lembaga tertinggi dalam organisasi yang bertanggung jawab atas
+                pengelolaan
+                dan pengambilan keputusan strategis untuk organisasi ini. BPH memiliki tugas untuk memastikan kelancaran
+                operasional serta pengambilan kebijakan jangka panjang yang sejalan dengan visi dan misi organisasi.
+              </p><br>
+              <h5 class="text-1xl font-medium text-gray-800 mb-3">Ketua :</h5>
+              <p class="text-lg text-gray-600">
+                Ketua HMPSIK adalah pimpinan lembaga eksekutif tingkat Program Studi Ilmu Keperawatan S1.
+                Ketua HMPSIK bertugas sebagai penanggung jawab jalannya HMPSIK, membuat dan melaksanakan program kerja
+                selama 1 periode kepengurusan, memperjuangkan aspirasi mahasiswa Program Studi Ilmu Keperawatan S1,
+                menyampaikan laporan pertanggungjawaban (LPJ) HMPSIK dalam MMPS dan Musyang HMPSIK, menaati peraturan
+                yang ada di KM FIKES UMP, mengoordinasikan, mengorganisasikan, serta menjaga keutuhan dan kekompakan
+                seluruh pengurus dan anggota HMPSIK.
+              </p><br>
+              <h5 class="text-1xl font-medium text-gray-800 mb-3">Wakil Ketua :</h5>
+              <p class="text-lg text-gray-600">
+                Wakil ketua HMPSIK bertugas bersama dengan ketua menjalankan amanah organisasi HMPSIK,
+                mewakili tugas-tugas ketua apabila dari ketua berhalangan, bertanggung jawab terhadap proses
+                pengembangan dan pengoptimalisasian setiap departemen, mengoordinasikan pelaksanaan pengawasan
+                peningkatan disiplin kerja, bersama ketua mengoordinasikan, mengorganisasikan, serta menjaga
+                keutuhan dan kekompakan seluruh pengurus dan anggota HMPSIK.
+              </p><br>
+              <h5 class="text-1xl font-medium text-gray-800 mb-3">Sekretaris Umum :</h5>
+              <p class="text-lg text-gray-600">
+                Sekretaris umum bertugas bertanggung jawab atas manajemen administrasi HMPSIK, pengarsipan dokumen,
+                pendokumentasian hasil rapat, pembuatan dokumen-dokumen kesekretariatan, bersama bendahara melengkapi
+                perangkat kesekretariatan, bersama ketua menandatangani surat-surat organisasi, membuat daftar
+                inventaris
+                lembaga HMPSIK, dan menentukan kebijakan terkait dengan administrasi dan kesekretariatan guna kelancaran
+                organisasi.
+              </p><br>
+              <h5 class="text-1xl font-medium text-gray-800 mb-3">Bendahara Umum :</h5>
+              <p class="text-lg text-gray-600">
+                Bendahara umum bertugas memegang kebijaksanaan terhadap keuangan HMPSIK, mengatur, menyimpan, dan
+                mengelola
+                keuangan HMPSIK, mengatur dan mengontrol keuangan disetiap kepanitiaan dan kepengurusan HMPSIK,
+                bertanggung
+                jawab atas kas organisasi, menentukan, menetapkan peraturan, serta membuat laporan umum yang berkaitan
+                dengan
+                pemasukan dan pengeluaran keuangan HMPSIK dan melaporkan kepada pengurus harian secara berkala.
+              </p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Departemen Pengkaderan-->
+      <div id="detail-pengkaderan"class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Pengkaderan</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/kader.jpg" alt="Pengkaderan">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/pengkaderan/koorkader.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/pengkaderan/sekrekader.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/pengkaderan/anggotakader2.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/pengkaderan/anggotakader1.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/pengkaderan/anggotakader3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div><br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Pengkaderan</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen pengkaderan adalah departemen yang bertugas untuk mengayomi dan membina pengurus
+                dan anggota HMPSIK.
+              </p>
+              <br>
+
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Program Kerja Departemen Pengkaderan terdiri dari:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Open recruitment calon pengurus HMPSIK</li>
+                <li>Upgrading dan Makrab HMPSIK</li>
+                <li>Sankalpa Mengajar</li>
+              </ul>
+              <br>
+
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Agenda:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Pembuatan WEB HMPSIK</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Departemen Kajian Strategi dan Advokasi-->
+      <div id="detail-kastrad" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Kajian Strategi dan Advokasi</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/kastrad.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/kastrad/koorkastrad.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kastrad/sekre.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kastrad/anggota1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kastrad/anggota2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kastrad/anggota3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div><br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kajian Strategi dan Advokasi</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen Kastrad (Kajian Strategi dan Advokasi) adalah departemen yang bertugas sebagai wadah
+                aspirasi mahasiswa untuk menyalurkan aspirasi ke pimpinan secara lebih sistematis dan membahas isu
+                dalam dunia kesehatan terutama dalam keperawatan.
+              </p>
+              <br>
+
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Program Kerja Departemen Kastrad terdiri dari</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Mengenal Kastrad</li>
+                <li>Pelatihan persidangan</li>
+                <li>MMPS 1&2</li>
+                <li>MMPS 3</li>
+                <li>Kotak saran (Takaran)</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Departemen Pendidikan dan Keilmuan --> 
+      <div id="detail-pk" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Pendidikan dan Keilmuan</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/PK.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/P&K/koordinator.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/P&K/sekre.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/P&K/anggot1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/P&K/anggota2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/P&K/anggota3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/P&K/anggota4.jpg" alt="Pengurus 5">
+              <p>Anggota 4</p>
+            </div>
+            <br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Pendidikan dan Keilmuan</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen P&K (Pendidikan dan Keilmuan) adalah departemen yang bergerak di bidang intelektualitas dan
+                bertugas untuk memberikan fasilitas mahasiswa Ilmu Keperawatan S1 untuk mengembangkan minat bakat dalam 
+                bidang keilmuan dan menjadikan mahasiswa Program Studi Ilmu Keperawatan S1 yang berkompeten.
+              </p>
+              <br>
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Program Kerja  Departemen P&K terdiri dari:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Penyuluhan dan sosialisasi kesehatan.</li>
+                <li>Seminar Internasional NUMERUS</li>
+                <li>NUMERUS (Nurshing Academy Competition and Awards)</li>
+                <li>Video edukasj tentang  kesehatan</li>
+                <li> Poster peringatan hari besar</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Departemen Kerohaian -->
+       <div id="detail-kerohanian" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Kerohaian</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/kerohanian.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/kerohanian/koor.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kerohanian/sekre.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kerohanian/anggota1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kerohanian/anggota2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kerohanian/anggota3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div>
+            <br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kerohaian</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen kerohanian adalah departemen yang bergerak dalam bidang religiusitas.
+              </p>
+              <br>
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Program Kerja  Departemen Kerohanian terdiri dari:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Sankalpa Islamic Fair (Poster, Artikel, MTQ) </li>
+                <li>Tour Ramadhan</li>
+                <li>Halal Bihalal</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Departemen Seni Budaya dan Olahraga -->
+       <div id="detail-sbo" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Seni Budaya dan Olahraga</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/olahraga.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/SBO/koor.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/SBO/sekre.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/SBO/anggota 1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/SBO/anggota 2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/SBO/anggota 3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div>
+            <br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Seni Budaya dan Olahraga</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen SBO adalah departemen yang bertujuan sebagai wadah bagi mahasiswa 
+                Program Studi Ilmu Keperawatan S1 untuk menyalurkan minat dan bakat
+                dalam hal keolahragaan, seni, dan kebudayaan. 
+              </p>
+              <br>
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Rekomendasi Departemen SBO terdiri dari:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Nursing cup</li>
+                <li>Band FIKES</li>
+                <li>Pelatihan (Futsal dan Badminton)</li>
+                <li>Perlombaan 17 Agustus</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Departemen Media komunikasi dan Informasi -->
+       <div id="detail-medkom" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Media komunikasi dan Informasi</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/medikom.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets//medikom/KOOR.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/medikom/SEKRE.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/medikom/ANGGOTA 1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/medikom/ANGGOTA 2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/medikom/ANGGOTA 3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div>
+            <br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Media Komunikasi dan Informasi</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen Medikominfo adalah departemen yang berperan dalam menyampaikan segala informasi 
+                yang berasal dari dalam maupun luar HMPSIK. 
+              </p>
+              <br>
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Program Kerja Departemen Medikominfo terdiri dari:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Nurshing Challenge</li>
+                <li>Mini Vlog</li>
+                <li>Pamflet Hari Besar Nasional dan internasional</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Departemen Kewirausahaan-->
+       <div id="detail-kwu" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Kewirausahaan</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/usaha.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/KWU/koor.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/KWU/sekre.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/KWU/anggota 1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/KWU/anggota 2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/KWU/anggota 3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div>
+            <br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kewirausahaan</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen Kewirausahaan adalah departemen yang bertugas sebagai tempat 
+                untuk mahasiswa Program Studi Ilmu Keperawatan S1 dalam mengembangkan 
+                kemampuan berwirausaha.
+              </p>
+              <br>
+              <p class="text-lg text-gray-600 text-left">
+                <strong>PProgram Kerja Departemen Kewirausahaan terdiri dari:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Pembuatan PDH</li>
+                <li>Menjual Nametag</li>
+                <li>Menjual Jilbab</li>
+                <LI>Menjual Alat Kesehatan</LI>
+                <LI>Membuka Stand Pasar Ramadhan</LI>
+                <LI>Menjual logo FIKES</LI>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Departemen Hubungan Luar -->
+       <div id="detail-hublu" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Hubungan Luar</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/huplu.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/HUBLU/koor.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/HUBLU/sekre.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/HUBLU/anggota 1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/HUBLU/anggota 2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/HUBLU/anggota 3.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/HUBLU/anggota 4.jpg" alt="Pengurus 5">
+              <p>Anggota 4</p>
+            </div>
+            <br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Hubungan Luar</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen Hublu (Hubungan Luar) adalah departemen yang bertugas sebagai 
+                penghubung antara pihak eksternal dengan pihak internal HMPSIK dan 
+                berfungsi sebagai mengatur delegasi untuk kegiatan eksternal HMPSIK.
+              </p>
+              <br>
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Program Kerja Departemen Hubuang Luar adalah:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Delegasi Undangan</li>
+                <li>Nurshing Students Eager to Speak
+                  Agenda</li>
+                <li>Welcome Demisioner</li>
+                <li>Tamasya Kerja</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Departemen Kesehatan -->
+       
+       <div id="detail-kesehatan" class="flex flex-wrap items-center justify-between mb-10">
+        <div class="container">
+          <!-- Heading Utama -->
+          <h1 class="main-heading">Departemen Kesehatan</h1>
+
+          <!-- Gambar Utama -->
+          <div class="main-image">
+            <img src="assets/kesehatan.jpg" alt="Kastrad">
+          </div>
+
+          <!-- Galeri Pengurus -->
+          <div class="team-gallery">
+            <div class="team-member">
+              <img src="assets/kesehatan/koor.jpg" alt="Pengurus 1">
+              <p>Koordinator</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kesehatan/sekre.jpg" alt="Pengurus 2">
+              <p>Sekretaris</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kesehatan/anggota 1.jpg" alt="Pengurus 3">
+              <p>Anggota 1</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kesehatan/anggota 2.jpg" alt="Pengurus 4">
+              <p>Anggota 2</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/kesehatan/anggota 4.jpg" alt="Pengurus 5">
+              <p>Anggota 3</p>
+            </div>
+            <br>
+            <div class="w-full md:w-[50%] pl-0 md:pl-10">
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kesehatan</h3>
+              <p class="text-lg text-gray-600 text-center">
+                Departemen kesehatan adalah departemen yang bergerak 
+                dalam bidang kesehatan dan berfungsi sebagai penyalur informasi kesehatan 
+                maupun melakukan kegiatan yang meningkatkan kesehatan masyarakat.
+              </p>
+              <br>
+              <p class="text-lg text-gray-600 text-left">
+                <strong>Program Kerja Departemen Kesehatan terdiri dari:</strong>
+              </p>
+              <ul class="list-disc pl-5 text-gray-600 text-left">
+                <li>Penyuluhan Kesehatan</li>
+                <li>Donor Darah</li>
+                <li>Pembuatan Poster Hari Kesehatan</li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Gallery Section -->
+  <div id="gallery" class="bg-gray-100 py-10">
+    <div class="container mx-auto px-5">
+      <!-- Section Title -->
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800" data-aos="fade-up">Gallery</h2>
+      <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="50">
+        Dokumentasi kegiatan HMPS Ilmu Keperawatan S1.
+      </p>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Image 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+          <img src="assets/pelantikan.jpg" alt="Kegiatan 1" class="w-[400px] h-[230px] object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Pelantikan Pengurus HMPS Ilmu Keperawatan S1</h3>
+            <p class="text-gray-600 text-sm">
+              Dilaksanakan pada tanggal 16 Oktober 2024 di ruang Z.I.26 Fikes UMP.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/musker.jpg" alt="Kegiatan 2" class="w-[400px] h-[230px] object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Musyawarah Kerja</h3>
+            <p class="text-gray-600 text-sm">
+              Dilaksanakan pada tanggal 09 November 2024 yang dihadiri oleh semua pengurus HMPS Ilmu Keperawatan periode
+              2024/2025
+            </p>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/upgrading.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Upgrading Pengurus HMPSIK 2024/2025</h3>
+            <p class="text-gray-600 text-sm">
+              Dilaksanakan pada tanggal 11 Januari 2025, yang dihadiri oleh perwakilan program studi ilmu keperawatan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/foto2.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Malam Keakraban</h3>
+            <p class="text-gray-600 text-sm">
+              Dilaksanakan di Villa Twin Palm Baturraden pada tanggal 11-12 Januari 2025.
+            </p>
+          </div>
+        </div>
+        <!-- Image 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/DONOR.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Donor Darah HMPSIK X HMPS Manajemen</h3>
+            <p class="text-gray-600 text-sm">
+              Dilaksanakan pada tanggal 30 Novermber 2024 di kampus 1 Universitas Muhammadiyah Purwokerto
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Gallery Section End -->
+  <!-- contact section -->
+  <div id="contact" class="contact bg-colorText text-white" style="height: 550px">
+    <div class="container p-5 mx-auto py-[50px]">
+      <!-- Mengurangi padding vertikal -->
+      <h5 class="font-medium text-[30px] text-center mb-8">Contact</h5>
+      <div class="flex flex-col justify-center items-center">
+        <div class="text-center mb-3">
+          <!-- Mengurangi jarak bawah pada elemen teks -->
+          <h5 data-aos="fade-up" class="font-medium text-2xl">Address</h5>
+          <h6 data-aos="fade-up" class="text-lg my-4 font-medium">
+            Sokaraja, Kec.Sokaraja, Kab.Banyumas
+          </h6>
+          <p data-aos="fade-up">
+            Dusun II, Sokaraja Kulon, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah 53181
+          </p>
+        </div>
+        <div data-aos="fade-up"
+          class="social-media-contact flex flex-wrap px-15 md:px-0 items-center gap-x-[15px] mt-[10px]">
+          <!-- Jarak atas diatur -->
+          <div class="instagram flex items-center gap-x-2">
+            <img src="assets/instagram.png" alt="" class="w-[20px] lg:w-[40px]" />
+            <a href="https://www.instagram.com/hmpsik_ump" class="font-medium text-[14px] sm:text-normal">Instagram</a>
+          </div>
+          <div class="gmail flex items-center gap-x-2">
+            <img src="assets/gmail1.png" alt="" class="w-[30px] lg:w-[50px]" />
+            <a href="https://shopee.co.id/ventela_purwokerto?smtt=0.92378651-1657340280.9"
+              class="font-medium text-[14px] sm:text-normal">Gmail</a>
+          </div>
+          <div class="tiktok flex items-center gap-x-2">
+            <img src="assets/tiktok.png" alt="" class="w-[20px] lg:w-[40px]" />
+            <a href="https://www.tiktok.com/@hmpsiks1_ump?_t=ZS-8tM1Wi7rI88&_r=1"
+              class="font-medium text-[14px] sm:text-normal">Tiktok</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
