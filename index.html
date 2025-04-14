@@ -7,11 +7,12 @@
   <link rel="icon" type="image/svg+xml" href="assets/logohmps.png" />
   <title>HMPS Ilmu Keperawatan S1</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-responsive.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
@@ -43,6 +44,7 @@
 
     gtag("config", "G-Y2CWZ0VDVY");
   </script>
+
 </head>
 
 <body class="font-poppins">
@@ -54,16 +56,13 @@
   <!-- navbar -->
   <div class="glass-effect bg-white/30 border-white/40 fixed left-10 top-2 right-10 z-10 rounded-full">
     <div class="relative container mx-auto flex items-center justify-between py-[11px] px-5">
-      <div class="logo text-[30px] text-[#1d68e0] font-bold flex items-center gap-x-2">
-        <img src="assets/logohmps.png" alt="Logo" class="w-[60px] hidden md:block" style="
-              width: 55px;
-              height: 55px;
+      <div class="logo text-[#1d68e0] font-bold flex items-center gap-x-2">
+        <img src="assets/logohmps.png" alt="Logo" class="w-[40px] md:w-[60px] block" style="
               border-radius: 50%;
               border: 2px;
-              display: block;
               margin: 0 auto;
             " />
-        KABINET SANKALPA BYAKTA
+        <span class="text-[16px] sm:text-[18px] md:text-[20px]">SANKALPABYAKTA</span>
       </div>
       <nav class="hidden lg:flex font-medium items-center md:gap-x-5 lg:gap-x-9 text-slate-600">
         <a href="#home">Home</a>
@@ -72,16 +71,21 @@
         <a href="#gallery">Gallery</a>
         <a href="#contact" class="px-5 py-1 rounded-full text-slate-600">Contact</a>
       </nav>
-      <div class="menu cursor-pointer w-[40px] h-[40px] bg-white flex lg:hidden items-center justify-center rounded-md">
-        <img src="assets/menu.svg" class="w-[30px]" />
+      <div class="menu cursor-pointer w-[30px] h-[30px] bg-white flex lg:hidden items-center justify-center rounded-md"
+        onclick="toggleMenu()">
+        <img src="assets/menu.svg" class="w-[20px]" />
       </div>
-      <div id="toggle-content" class="absolute right-5 top-16 w-[200px] rounded-lg bg-white py-3">
-        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#home">Home</a>
-        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#about">About</a>
-        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200"
+      <div id="toggle-content"
+        class="absolute right-0 top-16 w-[200px] rounded-lg bg-white py-3 hidden transform transition-all duration-300 ease-in-out shadow-lg">
+        <a class="block px-4 py-3 text-slate-600 hover:bg-slate-100 transition-colors font-medium" href="#home">Home</a>
+        <a class="block px-4 py-3 text-slate-600 hover:bg-slate-100 transition-colors font-medium"
+          href="#about">About</a>
+        <a class="block px-4 py-3 text-slate-600 hover:bg-slate-100 transition-colors font-medium"
           href="#departement">Kepengurusan</a>
-        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#gallery">Gallery</a>
-        <a class="px-3 py-1 font-medium border-s-2 border-brown-400 mb-1 hover:bg-slate-200" href="#contact">Contact</a>
+        <a class="block px-4 py-3 text-slate-600 hover:bg-slate-100 transition-colors font-medium"
+          href="#gallery">Gallery</a>
+        <a class="block px-4 py-3 text-slate-600 hover:bg-slate-100 transition-colors font-medium"
+          href="#contact">Contact</a>
       </div>
     </div>
   </div>
@@ -89,7 +93,108 @@
 
   <!-- hero section -->
   <div id="home" class="hero py-9 pt-[75px] bg-transparent text-slate-900">
-    <div class="container p-5 mx-auto grid grid-cols-1 lg:grid-cols-2 lg:h-[90vh] py-[200px] lg:py-0">
+    <!-- Mobile Version -->
+    <div class="container p-5 mx-auto grid grid-cols-1 md:hidden">
+      <div class="flex items-center justify-center text-center">
+        <div class="title mb-9">
+          <h2 data-aos="fade-up" class="font-bold text-[30px] text-center">
+            Himpunan Mahasiswa Program Studi
+            Ilmu Kepewaratan S1
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="50" class="text-[16px] my-5 font-medium text-center">
+            Universitas Muhammadiyah Purwokerto
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center justify-center mt-4">
+        <div class="slider-container w-full max-w-[400px]">
+          <div class="slider-wrapper">
+            <div class="slide">
+              <div class="border-[3px] rounded-lg overflow-hidden shadow-lg">
+                <img src="assets/foto2.jpg" alt="Slide 1" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="border-[3px] rounded-lg overflow-hidden shadow-lg">
+                <img src="assets/foto3.jpg" alt="Slide 2" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="border-[3px] rounded-lg overflow-hidden shadow-lg">
+                <img src="assets/foto4.jpg" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="border-[3px] rounded-lg overflow-hidden shadow-lg">
+                <img src="assets/foto5.jpg" alt="Slide 4" />
+              </div>
+            </div>
+          </div>
+
+          <button class="slider-nav prev">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 m-auto" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button class="slider-nav next">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 m-auto" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <div class="slider-dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tablet Version -->
+    <div class="container p-5 mx-auto hidden md:grid md:grid-cols-2 lg:hidden">
+      <div class="flex items-center justify-center text-center">
+        <div class="title mb-6">
+          <h2 data-aos="fade-up" class="font-bold text-[30px] md:text-[30px] text-center">
+            Himpunan Mahasiswa Program Studi
+            Ilmu Kepewaratan S1
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="50" class="text-[14px] md:text-[14px] my-3 font-medium text-center">
+            Universitas Muhammadiyah Purwokerto
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="box-image grid grid-cols-2 gap-4">
+          <div class="img-left">
+            <div data-aos="fade-up"
+              class="border-[3px] img w-full h-[200px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg">
+              <img src="assets/foto2.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="50"
+              class="border-[3px] img w-full h-[200px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg">
+              <img src="assets/foto3.jpg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="img-right">
+            <div data-aos="fade-up" data-aos-delay="100"
+              class="border-[3px] img w-full h-[200px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg">
+              <img src="assets/foto4.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="150"
+              class="border-[3px] img w-full h-[200px] rounded-lg bg-blue-600 mb-2 overflow-hidden shadow-lg">
+              <img src="assets/foto5.jpg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Version -->
+    <div class="container p-5 mx-auto hidden lg:grid lg:grid-cols-2 lg:h-[90vh]">
       <div class="flex items-center justify-center lg:justify-start text-center lg:text-start">
         <div class="title mb-9 lg:mb-0">
           <h2 data-aos="fade-up" class="font-bold text-[50px] text-left">
@@ -161,25 +266,66 @@
             VISI MISI <br>
             <span class="text-[#1d68e0]">HMPS ILMU KEPERAWATAN S1</span>
           </h2>
-          <p data-aos="fade-up" class="text-[15px] sm:text-normal lg:text-[18px] leading-relaxed lg:leading-loose">
-            <strong>Visi:</strong><br>
-            Menjadikan HMPSIK FIKES UMP sebagai suatu wadah aspirasi mahasiswa Ilmu Keperawatan S1 yang aktif, inovatif,
-            kreatif, dan solidaritas tinggi dalam upaya meningkatkan mahasiswa Ilmu Keperawatan S1 yang kritis,
-            kompeten,
-            integritas tinggi, dan profesional.
-            <br><br>
-            <strong>Misi:</strong><br>
-            1. Membangun kepedulian sosial antar pengurus, anggota, dan lembaga Keluarga Mahasiswa Fakultas Ilmu
-            Kesehatan (KM FIKES) sesuai dengan catur dharma perguruan tinggi.<br>
-            2. Meningkatkan kepeduliaan dan kepekaan mahasiswa terhadap tantangan dimasa depan khususnya dalam bidang
-            keperawatan.<br>
-            3. Menyelenggarakan kegiatan yang dapat meningkatkan kreativitas dan inovatif.<br>
-            4. Menumbuhkan rasa saling menghargai, menghormati, dan menjalin hubungan baik dengan sesama pengurus
-            HMPSIK, UKM, dosen, dan para alumni.<br>
-            5. Mendorong mahasiswa berperan aktif dan dinamis dalam semua kegiatan yang berada di dalam maupun di luar
-            kampus.<br>
-            6. Mendorong peningkatan mutu dan kualitas melalui integritas dan sinergitas mahasiswa Ilmu Keperawatan S1.
-          </p>
+
+          <!-- Mobile layout (default) -->
+          <div class="block md:hidden lg:block">
+            <p data-aos="fade-up" class="text-[15px] sm:text-normal lg:text-[18px] leading-relaxed lg:leading-loose"
+              style="margin-bottom: 5%;">
+              <strong>Visi:</strong><br>
+              Menjadikan HMPSIK FIKES UMP sebagai suatu wadah aspirasi mahasiswa Ilmu Keperawatan S1 yang aktif,
+              inovatif,
+              kreatif, dan solidaritas tinggi dalam upaya meningkatkan mahasiswa Ilmu Keperawatan S1 yang kritis,
+              kompeten,
+              integritas tinggi, dan profesional.
+              <br><br>
+              <strong>Misi:</strong><br>
+              1. Membangun kepedulian sosial antar pengurus, anggota, dan lembaga Keluarga Mahasiswa Fakultas Ilmu
+              Kesehatan (KM FIKES) sesuai dengan catur dharma perguruan tinggi.<br>
+              2. Meningkatkan kepeduliaan dan kepekaan mahasiswa terhadap tantangan dimasa depan khususnya dalam bidang
+              keperawatan.<br>
+              3. Menyelenggarakan kegiatan yang dapat meningkatkan kreativitas dan inovatif.<br>
+              4. Menumbuhkan rasa saling menghargai, menghormati, dan menjalin hubungan baik dengan sesama pengurus
+              HMPSIK, UKM, dosen, dan para alumni.<br>
+              5. Mendorong mahasiswa berperan aktif dan dinamis dalam semua kegiatan yang berada di dalam maupun di luar
+              kampus.<br>
+              6. Mendorong peningkatan mutu dan kualitas melalui integritas dan sinergitas mahasiswa Ilmu Keperawatan
+              S1.
+            </p>
+          </div>
+
+          <!-- Tablet-specific 2-column layout -->
+          <div class="hidden md:flex lg:hidden flex-wrap">
+            <div class="w-1/2 pr-4">
+              <div data-aos="fade-up" class="bg-white shadow-sm rounded-lg p-4 h-full">
+                <h3 class="text-xl font-bold text-[#000000] mb-3">Visi:</h3>
+                <p class="text-[14px] leading-relaxed" style="text-align: left;">
+                  Menjadikan HMPSIK FIKES UMP sebagai suatu wadah aspirasi mahasiswa Ilmu Keperawatan S1 yang aktif,
+                  inovatif,
+                  kreatif, dan solidaritas tinggi dalam upaya meningkatkan mahasiswa Ilmu Keperawatan S1 yang kritis,
+                  kompeten, integritas tinggi, dan profesional.
+                </p>
+              </div>
+            </div>
+            <div class="w-1/2 pl-4">
+              <div data-aos="fade-up" data-aos-delay="50" class="bg-white shadow-sm rounded-lg p-4 h-full">
+                <h3 class="text-xl font-bold text-[#000000] mb-3">Misi:</h3>
+                <ol class="text-[14px] leading-relaxed list-decimal pl-4" style="text-align: left;">
+                  <li class="mb-2">Membangun kepedulian sosial antar pengurus, anggota, dan lembaga Keluarga Mahasiswa
+                    Fakultas Ilmu Kesehatan (KM FIKES) sesuai dengan catur dharma perguruan tinggi.</li>
+                  <li class="mb-2">Meningkatkan kepeduliaan dan kepekaan mahasiswa terhadap tantangan dimasa depan
+                    khususnya dalam bidang keperawatan.</li>
+                  <li class="mb-2">Menyelenggarakan kegiatan yang dapat meningkatkan kreativitas dan inovatif.</li>
+                  <li class="mb-2">Menumbuhkan rasa saling menghargai, menghormati, dan menjalin hubungan baik dengan
+                    sesama pengurus HMPSIK, UKM, dosen, dan para alumni.</li>
+                  <li class="mb-2">Mendorong mahasiswa berperan aktif dan dinamis dalam semua kegiatan yang berada di
+                    dalam maupun di luar kampus.</li>
+                  <li>Mendorong peningkatan mutu dan kualitas melalui integritas dan sinergitas mahasiswa Ilmu
+                    Keperawatan S1.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -189,164 +335,163 @@
   <!-- kepengurusan section -->
   <div id="departement" class="Departement bg-secondary">
     <div class="container p-5 mx-auto py-[100px]">
-      <h2 class="font-medium text-[30px] text-center mb-9">KEPENGURUSAN HMPSIK 2024/2025</h2>
-      <div class="list-product flex items-center flex-wrap justify-center gap-5">
+      <h2 class="font-medium text-[24px] sm:text-[28px] lg:text-[30px] text-center mb-9">KEPENGURUSAN HMPSIK 2024/2025
+      </h2>
 
+      <!-- All screen sizes -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
         <!-- BPH -->
-        <div data-aos="fade-up" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <div data-aos="fade-up" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/BPH.jpg" class="w-full h-full object-cover" />
-          </div><br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Badan Pengurus Harian</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Badan Pengurus Harian</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-ph">
-                Lihat Detail
-              </a>
+              <a href="#detail-ph">Lihat Detail</a>
             </button>
           </div>
-
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- Pengkaderan -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/kader.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Pengkaderan</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Pengkaderan</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-pengkaderan">
-                Lihat Detail
-              </a>
+              <a href="#detail-pengkaderan">Lihat Detail</a>
+            </button>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- Kastrad -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/kastrad.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kajian Strategis dan Advokasi</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Kajian Strategis dan Advokasi</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-kastrad">
-                Lihat Detail
-              </a>
+              <a href="#detail-kastrad">Lihat Detail</a>
+            </button>
           </div>
         </div>
-      
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+
+        <!-- P&K -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/PK.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Pendidikan dan Keilmuan</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Pendidikan dan Keilmuan</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-pk">
-                Lihat Detail
-              </a>
+              <a href="#detail-pk">Lihat Detail</a>
+            </button>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- Kerohanian -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/kerohanian.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kerohanian</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Kerohanian</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-kerohanian">
-                Lihat Detail
-              </a>
+              <a href="#detail-kerohanian">Lihat Detail</a>
+            </button>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- SBO -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/olahraga.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Seni Budaya dan Olahraga</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Seni Budaya dan Olahraga</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-sbo">
-                Lihat Detail
-              </a>
+              <a href="#detail-sbo">Lihat Detail</a>
+            </button>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- Medikom -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/medikom.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Media Komunikasi dan Informasi</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Media Komunikasi dan Informasi</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-medkom">
-                Lihat Detail
-              </a>
+              <a href="#detail-medkom">Lihat Detail</a>
+            </button>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- KWU -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/usaha.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kewirausahaan</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Kewirausahaan</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-kwu">
-                Lihat Detail
-              </a>
+              <a href="#detail-kwu">Lihat Detail</a>
+            </button>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- Hublu -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 rounded-lg border shadow-sm bg-white">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/huplu.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Hubungan Luar</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Hubungan Luar</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-hublu">
-                Lihat Detail
-              </a>
+              <a href="#detail-hublu">Lihat Detail</a>
+            </button>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="card p-2 w-[33.33%] rounded-lg border shadow-sm bg-white">
-          <div class="img h-[230px] w-[400px] bg-slate-300 rounded-lg overflow-hidden shadow-lg">
+        <!-- Kesehatan -->
+        <div data-aos="fade-up" data-aos-delay="100"
+          class="card p-2 rounded-lg border shadow-sm bg-white md:col-span-2 md:mx-auto lg:col-span-1 lg:mx-0">
+          <div class="img h-[200px] md:h-[230px] w-full bg-slate-300 rounded-lg overflow-hidden shadow-lg">
             <img src="assets/kesehatan.jpg" class="w-full h-full object-cover" />
-          </div> <br>
-          <div class="product-desc">
-            <h4 class="font-medium text-xl" style="text-align: center;">Departemen Kesehatan</h4>
+          </div>
+          <div class="product-desc mt-4">
+            <h4 class="font-medium text-lg md:text-xl text-center">Departemen Kesehatan</h4>
           </div>
           <div class="flex items-center justify-center mt-3">
             <button class="whatsappButton px-4 py-1 font-medium bg-button text-white rounded-full mt-2">
-              <a href="#detail-kesehatan">
-                Lihat Detail
-              </a>
+              <a href="#detail-kesehatan">Lihat Detail</a>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
   <!-- kepengurusan section end -->
 
@@ -396,7 +541,8 @@
               <p>Bendahara 2</p>
             </div>
             <div class="w-full md:w-[50%] pl-0 md:pl-10">
-              <h3 class="text-2xl font-medium text-gray-800 mb-3">Badan Pengurus Harian</h3>
+              <h3 class="text-2xl font-medium text-gray-800 mb-3" style="text-align: center !important;">Badan Pengurus
+                Harian</h3>
               <p class="text-lg text-gray-600">
                 Badan Pengurus Harian (BPH) adalah lembaga tertinggi dalam organisasi yang bertanggung jawab atas
                 pengelolaan
@@ -445,7 +591,7 @@
       </div>
 
       <!-- Departemen Pengkaderan-->
-      <div id="detail-pengkaderan"class="flex flex-wrap items-center justify-between mb-10">
+      <div id="detail-pengkaderan" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
           <h1 class="main-heading">Departemen Pengkaderan</h1>
@@ -562,7 +708,7 @@
         </div>
       </div>
 
-      <!-- Departemen Pendidikan dan Keilmuan --> 
+      <!-- Departemen Pendidikan dan Keilmuan -->
       <div id="detail-pk" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
@@ -604,29 +750,29 @@
               <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Pendidikan dan Keilmuan</h3>
               <p class="text-lg text-gray-600 text-center">
                 Departemen P&K (Pendidikan dan Keilmuan) adalah departemen yang bergerak di bidang intelektualitas dan
-                bertugas untuk memberikan fasilitas mahasiswa Ilmu Keperawatan S1 untuk mengembangkan minat bakat dalam 
+                bertugas untuk memberikan fasilitas mahasiswa Ilmu Keperawatan S1 untuk mengembangkan minat bakat dalam
                 bidang keilmuan dan menjadikan mahasiswa Program Studi Ilmu Keperawatan S1 yang berkompeten.
               </p>
               <br>
               <p class="text-lg text-gray-600 text-left">
-                <strong>Program Kerja  Departemen P&K terdiri dari:</strong>
+                <strong>Program Kerja Departemen P&K terdiri dari:</strong>
               </p>
               <ul class="list-disc pl-5 text-gray-600 text-left">
                 <li>Penyuluhan dan sosialisasi kesehatan.</li>
                 <li>Seminar Internasional NUMERUS</li>
                 <li>NUMERUS (Nurshing Academy Competition and Awards)</li>
-                <li>Video edukasj tentang  kesehatan</li>
+                <li>Video edukasj tentang kesehatan</li>
                 <li> Poster peringatan hari besar</li>
             </div>
           </div>
         </div>
       </div>
 
-       <!-- Departemen Kerohaian -->
-       <div id="detail-kerohanian" class="flex flex-wrap items-center justify-between mb-10">
+      <!-- Departemen Kerohaian -->
+      <div id="detail-kerohanian" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
-          <h1 class="main-heading">Departemen Kerohaian</h1>
+          <h1 class="main-heading">Departemen Kerohanian</h1>
 
           <!-- Gambar Utama -->
           <div class="main-image">
@@ -657,13 +803,13 @@
             </div>
             <br>
             <div class="w-full md:w-[50%] pl-0 md:pl-10">
-              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kerohaian</h3>
+              <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kerohanian</h3>
               <p class="text-lg text-gray-600 text-center">
                 Departemen kerohanian adalah departemen yang bergerak dalam bidang religiusitas.
               </p>
               <br>
               <p class="text-lg text-gray-600 text-left">
-                <strong>Program Kerja  Departemen Kerohanian terdiri dari:</strong>
+                <strong>Program Kerja Departemen Kerohanian terdiri dari:</strong>
               </p>
               <ul class="list-disc pl-5 text-gray-600 text-left">
                 <li>Sankalpa Islamic Fair (Poster, Artikel, MTQ) </li>
@@ -674,8 +820,8 @@
         </div>
       </div>
 
-       <!-- Departemen Seni Budaya dan Olahraga -->
-       <div id="detail-sbo" class="flex flex-wrap items-center justify-between mb-10">
+      <!-- Departemen Seni Budaya dan Olahraga -->
+      <div id="detail-sbo" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
           <h1 class="main-heading">Departemen Seni Budaya dan Olahraga</h1>
@@ -711,9 +857,9 @@
             <div class="w-full md:w-[50%] pl-0 md:pl-10">
               <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Seni Budaya dan Olahraga</h3>
               <p class="text-lg text-gray-600 text-center">
-                Departemen SBO adalah departemen yang bertujuan sebagai wadah bagi mahasiswa 
+                Departemen SBO adalah departemen yang bertujuan sebagai wadah bagi mahasiswa
                 Program Studi Ilmu Keperawatan S1 untuk menyalurkan minat dan bakat
-                dalam hal keolahragaan, seni, dan kebudayaan. 
+                dalam hal keolahragaan, seni, dan kebudayaan.
               </p>
               <br>
               <p class="text-lg text-gray-600 text-left">
@@ -723,14 +869,14 @@
                 <li>Nursing cup</li>
                 <li>Band FIKES</li>
                 <li>Pelatihan (Futsal dan Badminton)</li>
-                <li>Perlombaan 17 Agustus</li>
+                <li>Perlombaan 17 Agustus</li>
             </div>
           </div>
         </div>
       </div>
 
-       <!-- Departemen Media komunikasi dan Informasi -->
-       <div id="detail-medkom" class="flex flex-wrap items-center justify-between mb-10">
+      <!-- Departemen Media komunikasi dan Informasi -->
+      <div id="detail-medkom" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
           <h1 class="main-heading">Departemen Media komunikasi dan Informasi</h1>
@@ -766,8 +912,8 @@
             <div class="w-full md:w-[50%] pl-0 md:pl-10">
               <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Media Komunikasi dan Informasi</h3>
               <p class="text-lg text-gray-600 text-center">
-                Departemen Medikominfo adalah departemen yang berperan dalam menyampaikan segala informasi 
-                yang berasal dari dalam maupun luar HMPSIK. 
+                Departemen Medikominfo adalah departemen yang berperan dalam menyampaikan segala informasi
+                yang berasal dari dalam maupun luar HMPSIK.
               </p>
               <br>
               <p class="text-lg text-gray-600 text-left">
@@ -782,8 +928,8 @@
         </div>
       </div>
 
-       <!-- Departemen Kewirausahaan-->
-       <div id="detail-kwu" class="flex flex-wrap items-center justify-between mb-10">
+      <!-- Departemen Kewirausahaan-->
+      <div id="detail-kwu" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
           <h1 class="main-heading">Departemen Kewirausahaan</h1>
@@ -819,13 +965,13 @@
             <div class="w-full md:w-[50%] pl-0 md:pl-10">
               <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kewirausahaan</h3>
               <p class="text-lg text-gray-600 text-center">
-                Departemen Kewirausahaan adalah departemen yang bertugas sebagai tempat 
-                untuk mahasiswa Program Studi Ilmu Keperawatan S1 dalam mengembangkan 
+                Departemen Kewirausahaan adalah departemen yang bertugas sebagai tempat
+                untuk mahasiswa Program Studi Ilmu Keperawatan S1 dalam mengembangkan
                 kemampuan berwirausaha.
               </p>
               <br>
               <p class="text-lg text-gray-600 text-left">
-                <strong>PProgram Kerja Departemen Kewirausahaan terdiri dari:</strong>
+                <strong>Program Kerja Departemen Kewirausahaan terdiri dari:</strong>
               </p>
               <ul class="list-disc pl-5 text-gray-600 text-left">
                 <li>Pembuatan PDH</li>
@@ -833,14 +979,14 @@
                 <li>Menjual Jilbab</li>
                 <LI>Menjual Alat Kesehatan</LI>
                 <LI>Membuka Stand Pasar Ramadhan</LI>
-                <LI>Menjual logo FIKES</LI>
+                <LI>Menjual logo FIKES</LI>
             </div>
           </div>
         </div>
       </div>
 
-       <!-- Departemen Hubungan Luar -->
-       <div id="detail-hublu" class="flex flex-wrap items-center justify-between mb-10">
+      <!-- Departemen Hubungan Luar -->
+      <div id="detail-hublu" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
           <h1 class="main-heading">Departemen Hubungan Luar</h1>
@@ -880,8 +1026,8 @@
             <div class="w-full md:w-[50%] pl-0 md:pl-10">
               <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Hubungan Luar</h3>
               <p class="text-lg text-gray-600 text-center">
-                Departemen Hublu (Hubungan Luar) adalah departemen yang bertugas sebagai 
-                penghubung antara pihak eksternal dengan pihak internal HMPSIK dan 
+                Departemen Hublu (Hubungan Luar) adalah departemen yang bertugas sebagai
+                penghubung antara pihak eksternal dengan pihak internal HMPSIK dan
                 berfungsi sebagai mengatur delegasi untuk kegiatan eksternal HMPSIK.
               </p>
               <br>
@@ -893,15 +1039,15 @@
                 <li>Nurshing Students Eager to Speak
                   Agenda</li>
                 <li>Welcome Demisioner</li>
-                <li>Tamasya Kerja</li>
+                <li>Tamasya Kerja</li>
             </div>
           </div>
         </div>
       </div>
 
-       <!-- Departemen Kesehatan -->
-       
-       <div id="detail-kesehatan" class="flex flex-wrap items-center justify-between mb-10">
+      <!-- Departemen Kesehatan -->
+
+      <div id="detail-kesehatan" class="flex flex-wrap items-center justify-between mb-10">
         <div class="container">
           <!-- Heading Utama -->
           <h1 class="main-heading">Departemen Kesehatan</h1>
@@ -937,8 +1083,8 @@
             <div class="w-full md:w-[50%] pl-0 md:pl-10">
               <h3 class="text-2xl font-medium text-gray-800 mb-3">Departemen Kesehatan</h3>
               <p class="text-lg text-gray-600 text-center">
-                Departemen kesehatan adalah departemen yang bergerak 
-                dalam bidang kesehatan dan berfungsi sebagai penyalur informasi kesehatan 
+                Departemen kesehatan adalah departemen yang bergerak
+                dalam bidang kesehatan dan berfungsi sebagai penyalur informasi kesehatan
                 maupun melakukan kegiatan yang meningkatkan kesehatan masyarakat.
               </p>
               <br>
@@ -948,7 +1094,7 @@
               <ul class="list-disc pl-5 text-gray-600 text-left">
                 <li>Penyuluhan Kesehatan</li>
                 <li>Donor Darah</li>
-                <li>Pembuatan Poster Hari Kesehatan</li>
+                <li>Pembuatan Poster Hari Kesehatan</li>
             </div>
           </div>
         </div>
@@ -968,9 +1114,11 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Image 1 -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-          <img src="assets/pelantikan.jpg" alt="Kegiatan 1" class="w-[400px] h-[230px] object-cover">
+          <img src="assets/pelantikan.jpg" alt="Kegiatan 1" class="w-[400px] h-[230px] object-cover"
+            style="width: 100%;">
           <div class="p-4">
-            <h3 class="text-lg font-bold text-gray-800">Pelantikan Pengurus HMPS Ilmu Keperawatan S1</h3>
+            <h3 class="text-lg font-bold text-gray-800" style="margin-bottom: 10px;">Pelantikan Pengurus HMPS<br />Ilmu
+              Keperawatan S1</h3>
             <p class="text-gray-600 text-sm">
               Dilaksanakan pada tanggal 16 Oktober 2024 di ruang Z.I.26 Fikes UMP.
             </p>
@@ -979,9 +1127,9 @@
 
         <!-- Image 2 -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/musker.jpg" alt="Kegiatan 2" class="w-[400px] h-[230px] object-cover">
+          <img src="assets/musker.jpg" alt="Kegiatan 2" class="w-[400px] h-[230px] object-cover" style="width: 100%;">
           <div class="p-4">
-            <h3 class="text-lg font-bold text-gray-800">Musyawarah Kerja</h3>
+            <h3 class="text-lg font-bold text-gray-800" style="margin-bottom: 10px;">Musyawarah Kerja</h3>
             <p class="text-gray-600 text-sm">
               Dilaksanakan pada tanggal 09 November 2024 yang dihadiri oleh semua pengurus HMPS Ilmu Keperawatan periode
               2024/2025
@@ -991,9 +1139,11 @@
 
         <!-- Image 3 -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/upgrading.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover">
+          <img src="assets/upgrading.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover"
+            style="width: 100%;">
           <div class="p-4">
-            <h3 class="text-lg font-bold text-gray-800">Upgrading Pengurus HMPSIK 2024/2025</h3>
+            <h3 class="text-lg font-bold text-gray-800" style="margin-bottom: 10px;">Upgrading Pengurus HMPSIK 2024/2025
+            </h3>
             <p class="text-gray-600 text-sm">
               Dilaksanakan pada tanggal 11 Januari 2025, yang dihadiri oleh perwakilan program studi ilmu keperawatan.
             </p>
@@ -1002,9 +1152,9 @@
 
         <!-- Image 3 -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/foto2.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover">
+          <img src="assets/foto2.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover" style="width: 100%;">
           <div class="p-4">
-            <h3 class="text-lg font-bold text-gray-800">Malam Keakraban</h3>
+            <h3 class="text-lg font-bold text-gray-800" style="margin-bottom: 10px;">Malam Keakraban</h3>
             <p class="text-gray-600 text-sm">
               Dilaksanakan di Villa Twin Palm Baturraden pada tanggal 11-12 Januari 2025.
             </p>
@@ -1012,9 +1162,10 @@
         </div>
         <!-- Image 3 -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/DONOR.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover">
+          <img src="assets/DONOR.jpg" alt="Kegiatan 3" class="w-[400px] h-[230px] object-cover" style="width: 100%;">
           <div class="p-4">
-            <h3 class="text-lg font-bold text-gray-800">Donor Darah HMPSIK X HMPS Manajemen</h3>
+            <h3 class="text-lg font-bold text-gray-800" style="margin-bottom: 10px;">Donor Darah HMPSIK X HMPS Manajemen
+            </h3>
             <p class="text-gray-600 text-sm">
               Dilaksanakan pada tanggal 30 Novermber 2024 di kampus 1 Universitas Muhammadiyah Purwokerto
             </p>
@@ -1026,47 +1177,251 @@
   </div>
   <!-- Gallery Section End -->
   <!-- contact section -->
-  <div id="contact" class="contact bg-colorText text-white" style="height: 550px">
-    <div class="container p-5 mx-auto py-[50px]">
-      <!-- Mengurangi padding vertikal -->
-      <h5 class="font-medium text-[30px] text-center mb-8">Contact</h5>
-      <div class="flex flex-col justify-center items-center">
-        <div class="text-center mb-3">
-          <!-- Mengurangi jarak bawah pada elemen teks -->
-          <h5 data-aos="fade-up" class="font-medium text-2xl">Address</h5>
-          <h6 data-aos="fade-up" class="text-lg my-4 font-medium">
-            Sokaraja, Kec.Sokaraja, Kab.Banyumas
-          </h6>
-          <p data-aos="fade-up">
+  <div id="contact" class="contact bg-colorText text-white">
+    <div class="container mx-auto py-12 px-6 md:py-16 md:px-10 lg:px-20">
+      <div class="flex flex-col md:flex-row justify-between items-start max-w-5xl mx-auto">
+        <!-- Address Section -->
+        <div class="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0" data-aos="fade-up">
+          <h3 class="font-semibold text-2xl mb-5">Address</h3>
+          <p class="text-lg font-medium mb-3">Sokaraja, Kec.Sokaraja, Kab.Banyumas</p>
+          <p class="text-base text-gray-300 max-w-md mx-auto md:mx-0 px-4 md:px-0 leading-relaxed">
             Dusun II, Sokaraja Kulon, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah 53181
           </p>
         </div>
-        <div data-aos="fade-up"
-          class="social-media-contact flex flex-wrap px-15 md:px-0 items-center gap-x-[15px] mt-[10px]">
-          <!-- Jarak atas diatur -->
-          <div class="instagram flex items-center gap-x-2">
-            <img src="assets/instagram.png" alt="" class="w-[20px] lg:w-[40px]" />
-            <a href="https://www.instagram.com/hmpsik_ump" class="font-medium text-[14px] sm:text-normal">Instagram</a>
-          </div>
-          <div class="gmail flex items-center gap-x-2">
-            <img src="assets/gmail1.png" alt="" class="w-[30px] lg:w-[50px]" />
-             hmpskeps1ump@gmail.com
-          </div>
-          <div class="tiktok flex items-center gap-x-2">
-            <img src="assets/tiktok.png" alt="" class="w-[20px] lg:w-[40px]" />
+
+        <!-- Social Media Section -->
+        <div class="w-full md:w-1/2" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-semibold text-2xl mb-8 text-center md:text-left">Connect With Us</h3>
+          <div class="flex flex-col space-y-7 items-start px-10 md:px-0">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/hmpsik_ump"
+              class="flex items-center space-x-5 hover:text-blue-300 transition-colors duration-300 group w-full max-w-[260px]">
+              <div
+                class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 transition-all duration-300 shadow-lg">
+                <img src="assets/instagram.png" alt="Instagram" class="w-7 h-7">
+              </div>
+              <span class="font-medium text-lg">Instagram</span>
+            </a>
+
+            <!-- Gmail -->
+            <a href="mailto:hmpsik.ump@gmail.com"
+              class="flex items-center space-x-5 hover:text-blue-300 transition-colors duration-300 group w-full max-w-[260px]">
+              <div
+                class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 transition-all duration-300 shadow-lg">
+                <img src="assets/gmail1.png" alt="Gmail" class="w-7 h-7">
+              </div>
+              <span class="font-medium text-lg">Gmail</span>
+            </a>
+
+            <!-- TikTok -->
             <a href="https://www.tiktok.com/@hmpsiks1_ump?_t=ZS-8tM1Wi7rI88&_r=1"
-              class="font-medium text-[14px] sm:text-normal">Tiktok</a>
+              class="flex items-center space-x-5 hover:text-blue-300 transition-colors duration-300 group w-full max-w-[260px]">
+              <div
+                class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 transition-all duration-300 shadow-lg">
+                <img src="assets/tiktok.png" alt="TikTok" class="w-7 h-7">
+              </div>
+              <span class="font-medium text-lg">TikTok</span>
+            </a>
           </div>
         </div>
       </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-gray-500 mt-12 pt-6 text-center">
+        <p class="text-base text-white py-3" style="margin-bottom: -2.5%;">© 2024 HMPS Ilmu Keperawatan S1 - Universitas
+          Muhammadiyah Purwokerto</p>
+      </div>
     </div>
   </div>
+
+  <!-- Add tablet-specific styles for contact section -->
+  <style>
+    @media (min-width: 768px) and (max-width: 1023px) {
+
+      /* Special layout adjustments for tablet view */
+      #contact .container {
+        max-width: 720px;
+      }
+
+      #contact .w-full.md\:w-1\/2 {
+        width: 48%;
+        /* Slightly less than half to maintain gap */
+      }
+
+      #contact h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      #contact .social-media a {
+        width: 100%;
+      }
+
+      /* Add little decorative line between sections on tablet */
+      #contact .w-full.md\:w-1\/2:first-child {
+        position: relative;
+      }
+
+      #contact .w-full.md\:w-1\/2:first-child::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        right: -15px;
+        height: 80%;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  </style>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    // Mobile menu toggle
+    let isMenuOpen = false;
+    const toggleMenu = () => {
+      const menu = document.getElementById('toggle-content');
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        menu.classList.remove('hidden');
+        menu.classList.add('block');
+      } else {
+        menu.classList.remove('block');
+        menu.classList.add('hidden');
+      }
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const menu = document.getElementById('toggle-content');
+      const hamburger = document.querySelector('.menu');
+      if (!menu.contains(e.target) && !hamburger.contains(e.target) && isMenuOpen) {
+        toggleMenu();
+      }
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('#toggle-content a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (isMenuOpen) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Team member layout handler
+    document.addEventListener('DOMContentLoaded', function () {
+      // Center the last department card if it's alone in the last row on desktop
+      const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+
+      if (isDesktop) {
+        const departmentGrid = document.querySelector('#departement .grid');
+        const departments = departmentGrid.querySelectorAll('.card');
+        const lastDepartment = departments[departments.length - 1];
+
+        // If we have a number of departments not divisible by 3 on desktop (3-column layout)
+        if (departments.length % 3 === 1) {
+          lastDepartment.style.gridColumn = '2 / span 1';
+          lastDepartment.style.maxWidth = '100%';
+        }
+      }
+
+      // Only run tablet-specific layout for team members on tablet screens
+      const isTablet = window.matchMedia('(min-width: 768px) and (max-width: 1023px)').matches;
+      if (!isTablet) return;
+
+      // Process all team galleries
+      document.querySelectorAll('.team-gallery').forEach(gallery => {
+        const members = gallery.querySelectorAll('.team-member');
+
+        // Special layout for 6 members (4-2 layout)
+        if (members.length === 6) {
+          members.forEach((member, index) => {
+            // Reset existing styles
+            member.style.marginLeft = '';
+            member.style.marginRight = '';
+
+            if (index < 4) {
+              // First row: 4 members
+              member.style.marginLeft = '10px';
+              member.style.marginRight = '10px';
+            } else {
+              // Second row: 2 members
+              member.style.marginLeft = '10px';
+              member.style.marginRight = '10px';
+            }
+          });
+        }
+      });
+    });
+
+    // Slider functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const sliderWrapper = document.querySelector('.slider-wrapper');
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
+
+      function goToSlide(index) {
+        currentIndex = index;
+        sliderWrapper.style.transform = `translateX(-${currentIndex * 25}%)`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        goToSlide(currentIndex);
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide);
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+      });
+
+      // Touch events for mobile
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      sliderWrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      });
+
+      sliderWrapper.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
+      });
+
+      sliderWrapper.addEventListener('touchend', () => {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+      });
+
+      // Initialize
+      goToSlide(0);
+    });
   </script>
 </body>
 
