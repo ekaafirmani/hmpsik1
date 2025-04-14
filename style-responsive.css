@@ -1,0 +1,286 @@
+.slider-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 400%;
+    /* 100% * number of slides */
+}
+
+.slide {
+    width: 25%;
+    /* 100% / number of slides */
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D1D5DB;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.dot.active {
+    background-color: #2563eb;
+    transform: scale(1.2);
+}
+
+/* Desktop-specific styles for kepengurusan section */
+@media (min-width: 1024px) {
+    #departement .container {
+        padding: 40px 80px;
+    }
+
+    #departement .grid {
+        gap: 30px;
+    }
+
+    #departement .card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    #departement h2 {
+        margin-bottom: 50px;
+    }
+
+    /* Add left margin to hero section text on desktop */
+    #home .lg\:text-start h2,
+    #home .lg\:text-start p {
+        margin-left: 40px;
+    }
+
+    /* Left-align Visi-Misi content on desktop */
+    #about .block.md\:hidden.lg\:block p {
+        text-align: left !important;
+    }
+
+    #about .block.md\:hidden.lg\:block strong,
+    #about .block.md\:hidden.lg\:block br {
+        text-align: left !important;
+    }
+
+    /* Center only the Visi and Misi headings */
+    #about .block.md\:hidden.lg\:block p strong:first-child {
+        display: block;
+        text-align: center !important;
+        margin-bottom: -5%;
+    }
+
+    /* Fix for Misi heading */
+    #about .block.md\:hidden.lg\:block p strong:nth-of-type(2) {
+        display: block;
+        text-align: center !important;
+        margin-bottom: -5%;
+    }
+
+    /* Add margin to Gallery section for desktop */
+    #gallery .container {
+        /* max-width: 1200px; */
+        margin: 0 auto;
+        padding: 40px 60px;
+    }
+
+    #gallery .grid {
+        gap: 30px;
+    }
+
+    #gallery .bg-white {
+        transition: transform 0.3s ease;
+    }
+
+    #gallery .bg-white:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Left-align department titles and descriptions on desktop */
+    @media (min-width: 1024px) {
+        .team-gallery .w-full h3.text-2xl {
+            text-align: left !important;
+        }
+
+        .team-gallery .w-full p.text-lg.text-gray-600.text-center {
+            text-align: left !important;
+        }
+
+        /* For similar content description sections */
+        .team-gallery .w-full p.text-lg.text-gray-600 {
+            text-align: left !important;
+        }
+    }
+}
+
+/* Tablet-only CSS (won't affect mobile or desktop) */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Create three-column layout for images in the about section */
+    #about .flex.flex-col {
+        flex-direction: row !important;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    /* Set equal width for all three images */
+    #about .flex.flex-col>div.img {
+        width: 31% !important;
+        height: 180px !important;
+        margin-top: 0 !important;
+    }
+
+    /* Remove the self-end alignment from the middle image for consistency */
+    #about .flex.flex-col>div.img.self-end {
+        align-self: auto;
+    }
+
+    /* Make department descriptions left-aligned on tablet */
+    .team-gallery .w-full p.text-lg.text-gray-600.text-center,
+    .team-gallery .w-full h3.text-2xl {
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Styling for team members in department sections */
+    .team-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .team-member {
+        width: 120px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Top row (5 positions) - spaced evenly */
+    .team-gallery .team-member:nth-child(-n+5) {
+        width: 110px;
+    }
+
+    /* Bottom row (2 positions) - with wide spacing */
+    .team-gallery .team-member:nth-child(n+6):nth-child(-n+7) {
+        width: 110px;
+    }
+
+    .team-member img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #2ED47A;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member p {
+        margin-top: 10px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    /* Layout for description section */
+    .team-gallery .w-full.md\:w-\[50\%\] {
+        width: 100% !important;
+        padding-left: 0 !important;
+        margin-top: 20px;
+    }
+
+    .main-heading {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    /* Department details section layout */
+    #detail-ph,
+    #detail-pengkaderan,
+    #detail-kastrad,
+    #detail-pk,
+    #detail-kerohanian,
+    #detail-sbo,
+    #detail-medkom,
+    #detail-kwu,
+    #detail-hublu,
+    #detail-kesehatan {
+        display: block !important;
+    }
+
+    #detail-ph .container,
+    #detail-pengkaderan .container,
+    #detail-kastrad .container,
+    #detail-pk .container,
+    #detail-kerohanian .container,
+    #detail-sbo .container,
+    #detail-medkom .container,
+    #detail-kwu .container,
+    #detail-hublu .container,
+    #detail-kesehatan .container {
+        padding: 20px;
+    }
+
+    .main-image {
+        margin-bottom: 1.5rem;
+    }
+
+    .main-image img {
+        border-radius: 0.5rem;
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        #departement .grid>div:last-child {
+            grid-column: 2;
+        }
+    }
+}
